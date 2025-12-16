@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Spotify Playlist</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<canvas id="bgCanvas"></canvas>
+
+<div class="app">
+  <aside class="sidebar">
+    <h2>🎵 Playlist</h2>
+    <ul id="songList"></ul>
+  </aside>
+
+  <main class="player">
+    <img id="cover">
+    <h3 id="title">Pilih Lagu</h3>
+    <p id="artist">—</p>
+
+    <input type="range" id="progress" value="0">
+
+    <div class="controls">
+      <button onclick="prev()">⏮</button>
+      <button id="shuffle" onclick="toggleShuffle()">🔀</button>
+      <button id="play" onclick="playPause()">▶</button>
+      <button id="repeat" onclick="toggleRepeat()">🔁</button>
+      <button onclick="next()">⏭</button>
+      <button onclick="shareSong()">📤</button>
+    </div>
+
+    <input type="range" id="volume" min="0" max="1" step="0.01">
+
+    <div class="lyrics-box" id="lyricsBox"></div>
+  </main>
+</div>
+
+<div id="miniPlayer" onclick="playPause()">🎵</div>
+
+<audio id="audio"></audio>
+
+<script src="playlist.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
