@@ -1,6 +1,6 @@
 const playlist = [
 {
-  title:"Song One",
+  title:"blue yung kai",
   artist:"My Playlist",
   cover:"https://i.imgur.com/1.jpg",
   src:"https://example.com/song1.mp3",
